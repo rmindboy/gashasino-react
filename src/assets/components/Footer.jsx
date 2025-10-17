@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Footer.css";
 
-function Header() {
+function Footer() {
   return (
     <>
       <footer>
@@ -24,4 +24,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Footer;

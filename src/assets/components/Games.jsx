@@ -1,5 +1,5 @@
 
-import GameCards from "./MainCards";
+import GameCard from "./MainCards";
 import React, { useState } from "react";
 import "../css/style-juegos.css"
 
