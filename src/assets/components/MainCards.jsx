@@ -19,6 +19,8 @@ function GameCard({ href, img, alt, title, subtitle, children }) {
 export default function MainCards() {
   return (
     <main className="main-menu">
+
+      
       <h1 className="main-title">Juegos más populares</h1>
 
       <GameCard

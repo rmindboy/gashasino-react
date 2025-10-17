@@ -43,13 +43,14 @@ nav ul li {
 
 /* Estilo de los botones */
 .auth-buttons button {
-    background: #fff;
-    color: #222;
+    background: #2ecc4048;
+    color: #ffffff;
     border: none;
     padding: 7px 18px;
     font-size: 1em;
     cursor: pointer;
     margin-left: 5px;
+    
 
     /* Evita que el texto se rompa en varias líneas */
     white-space: nowrap;
@@ -57,6 +58,14 @@ nav ul li {
     /* Alinea el contenido del botón en una sola fila */
     display: inline-flex;
     align-items: center;
+}
+
+.auth-buttons button:hover {
+    background: #2ecc4048;
+    color: #ffffff;
+    border-color: #2ecc40;
+    box-shadow: 0 0 10px #2ecc40;
+    transform: translateY(-10%) scale(1.05);
 }
 
 /* Estilo específico para el botón de registro */
@@ -89,6 +98,37 @@ nav ul li {
 .logo {
     text-decoration: none;
     color: #2ecc40; /* Mantén el color del logo */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 25px;  
+    list-style: none;
+    margin: 0;
+    padding: 0px 300px;
+}
+
+.nav-buttons button{
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 5px;
+
+    /* Mantener texto en una sola línea también aquí */
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;  
+}
+
+.nav-buttons button:hover{
+    background: #222;
+    color: #ffffff;
+    border-color: #2ecc40;
+    box-shadow: 0 0 10px #2ecc40;
+    transform: translateY(-10%) scale(1.2);
 }
 
 

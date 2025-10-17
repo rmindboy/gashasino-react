@@ -4,74 +4,7 @@ body {
     background: #ecd5f550;
     color: #222;
 }
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #222;
-    color: #fff;
-    padding: 10px 40px;
-}
-
-.logo {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 2.2em;
-    color: #2ecc40;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-decoration: none;
-}
-
-.juego-btn{
-    text-decoration: none;
-    color: white;
-}
-nav ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    font-size: 1.1em;
-    cursor: pointer;
-}
-
-.auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.auth-buttons button {
-    background: #fff;
-    color: #222;
-    border: none;
-    border-radius: 5px;
-    padding: 7px 18px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-.auth-buttons .register {
-    background: #444;
-    color: #fff;
-}
-
-.auth-buttons .register {
-    text-decoration: none;
-    background: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 7px 18px;
-    font-size: 1em;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-}
+z
 .main-title {
     text-align: center;
     font-family: 'Brush Script MT', cursive;
@@ -143,50 +76,6 @@ nav ul li {
     line-height: 1.5;
 }
 
-footer {
-    background: #f5f5f5;
-    border-top: 1px solid #ccc;
-    padding: 18px 0 0 0;
-    margin-top: 40px;
-}
-
-.footer-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px 10px 40px;
-    font-size: 1.1em;
-    color: #222;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    font-size: 1em;
-    color: #222;
-}
-
-.footer-links div {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.footer-social {
-    display: flex;
-    gap: 18px;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px 40px;
-}
-
-.footer-social img {
-    width: 28px;
-    height: 28px;
-    opacity: 0.8;
-    cursor: pointer;
-}
 .game-card-link {
     text-decoration: none; /* Elimina el subrayado del enlace */
     color: inherit; /* Mantiene el color del texto */

@@ -10,13 +10,23 @@ function Header({ onRegisterClick }) {
 
       <nav>
         <ul>
-          <a href="juegos.html" className="juego-btn">
+        <div className="nav-buttons">
+          <button className="Games">
             <li>Juegos</li>
-          </a>
+          </button>
+          <button className="Skins">
           <li>Aspectos</li>
+          </button>
+          <button className="Community">
           <li>Comunidad</li>
+          </button>
+          <button className="Store">
           <li>Tienda</li>
+          </button>
+          <button className="Gachapon">
           <li>Gachapon</li>
+          </button>
+        </div>
         </ul>
       </nav>
 

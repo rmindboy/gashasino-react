@@ -13,7 +13,6 @@ function App() {
   };
 
   return (
-    
     <>
       <Header onRegisterClick={handleRegisterClick} />
       {showRegister ? <Register /> : <MainCards />}
