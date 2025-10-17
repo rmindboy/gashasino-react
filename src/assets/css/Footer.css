@@ -1,0 +1,50 @@
+/* Estilo del pie de página */
+footer {
+    background: #f5f5f5;
+    border-top: 1px solid #ccc;
+    padding: 18px 0 0 0;
+    margin-top: 40px;
+}
+
+/* Estilo de la navegación del pie de página */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 10px 40px;
+    font-size: 1.1em;
+    color: #222;
+}
+
+/* Estilo de los enlaces del pie de página */
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 1em;
+    color: #222;
+}
+
+/* Estilo de cada columna de enlaces */
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Estilo de los enlaces individuales */
+.footer-social {
+    display: flex;
+    gap: 18px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+/* Estilo de los iconos sociales */
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.8;
+    cursor: pointer;
+}

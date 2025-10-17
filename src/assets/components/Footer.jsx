@@ -1,10 +1,10 @@
 import React from "react";
-import './assets/css/App.css';
+import "../css/Footer.css";
 
-function Header(){
-    return(
-        <>
-       <footer>
+function Header() {
+  return (
+    <>
+      <footer>
         <div className="footer-links">
           <div>
             <span>Quienes somos</span>
@@ -20,8 +20,8 @@ function Header(){
           </div>
         </div>
       </footer>
-        </>
-    )
+    </>
+  );
 }
 
 export default Header;
