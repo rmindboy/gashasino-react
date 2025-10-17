@@ -36,7 +36,6 @@ export default function MainCards() {
       </GameCard>
 
       <GameCard
-        href="#"
         img="src/assets/imgs/poker.png"
         alt="Poker"
         title="Poker"
@@ -50,13 +49,12 @@ export default function MainCards() {
       </GameCard>
 
       <GameCard
-        href="#"
         img="src/assets/imgs/slots.png"
         alt="Slots"
         title="Slots"
         subtitle="777"
       >
-        Juega a las maquinitas, ¿conseguir el triple 7?:
+        Juega a las maquinitas, ¿conseguiras el triple 7?:
         <br />
         <br />
         <b>Una más, una más, esta será mi suerte</b>, recuerda revisar bajo el
