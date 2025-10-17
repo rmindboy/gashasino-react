@@ -48,17 +48,6 @@ return (
         <b>Una más, una más, esta será mi suerte</b>, recuerda revisar bajo el
         sillón antes de venir, cada moneda cuenta.
       </GameCard>
-
-      <img
-        src="src/assets/imgs/crupier.png"
-        className="chica-img chica-right"
-        alt="Crupier"
-      />
-      <img
-        src="src/assets/imgs/apostadora.png"
-        className="chica-img chica-left"
-        alt="Apostadora"
-      />
     </main>
   );
 }
