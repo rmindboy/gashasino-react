@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/Header.css';
 
-function Header({ onRegisterClick }) {
+function Header({ onRegisterClick, onGamesClick }) {
   return (
     <header>
       <a href="mainmenu.html" className="logo">
@@ -9,24 +9,12 @@ function Header({ onRegisterClick }) {
       </a>
 
       <nav>
-        <ul>
-        <div className="nav-buttons">
-          <button className="Games">
-            <li>Juegos</li>
-          </button>
-          <button className="Skins">
-          <li>Aspectos</li>
-          </button>
-          <button className="Community">
-          <li>Comunidad</li>
-          </button>
-          <button className="Store">
-          <li>Tienda</li>
-          </button>
-          <button className="Gachapon">
-          <li>Gachapon</li>
-          </button>
-        </div>
+        <ul className="nav-buttons">
+          <li><button onClick={onGamesClick} className="Games">Juegos</button></li>
+          <li><button className="Skins">Aspectos</button></li>
+          <li><button className="Community">Comunidad</button></li>
+          <li><button className="Store">Tienda</button></li>
+          <li><button className="Gachapon">Gachapon</button></li>
         </ul>
       </nav>
 

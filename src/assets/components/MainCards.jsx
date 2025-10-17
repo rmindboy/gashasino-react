@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/MainCards.css";
 
-function GameCard({ href, img, alt, title, subtitle, children }) {
+export function GameCard({ href, img, alt, title, subtitle, children }) {
   return (
     <a href={href} className="game-card-link">
       <section className="game-card">

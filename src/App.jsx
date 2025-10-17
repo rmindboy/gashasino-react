@@ -4,21 +4,26 @@ import Header from "./assets/components/Header";
 import Footer from "./assets/components/Footer";
 import MainCards from "./assets/components/MainCards";
 import Register from "./assets/components/Register";
+import Games from "./assets/components/Games";
 
 function App() {
-  const [showRegister, setShowRegister] = useState(false);
 
-  const handleRegisterClick = () => {
-    setShowRegister(true);
-  };
+  const [view, setView] = useState("main");
 
-  return (
-    <>
-      <Header onRegisterClick={handleRegisterClick} />
-      {showRegister ? <Register /> : <MainCards />}
-      <Footer />
-    </>
-  );
+return (
+  <div>
+    <Header
+      onRegisterClick={() => setView("register")}
+      onGamesClick={() => setView("games")}
+    />
+    {view === "register" && <Register />}
+    {view === "games" && <Games />}
+    {view === "main" && <MainCards />}
+    <Footer />
+  </div>
+);
 }
 
+
 export default App;
+
