@@ -18,6 +18,7 @@ body {
     flex-direction: column; /* Apila los elementos verticalmente */
     align-items: center;    /* Centra el contenido horizontalmente */
     background: #fff;
+    color: #333;
     border: 2px solid #2ecc40;
     border-radius: 10px;
     margin: 0 auto 30px auto;
@@ -25,6 +26,10 @@ body {
     height: 500px;
     padding: 30px;
     box-shadow: 0 2px 8px rgba(44,204,64,0.08);
+
+    /* Evita que el padding aumente la altura total y recorta el contenido desbordado */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 
@@ -48,6 +53,11 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center; /* Centra el contenido dentro de games-info */
+
+    /* Asegura quiebre de palabras largas para no forzar el ancho */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .games-info h2 {
@@ -66,15 +76,17 @@ body {
     font-size: 0.98em;
     margin-top: 6px;
     line-height: 1.5;
+
+    /* Evita que la descripción expanda la tarjeta: limita altura y muestra scrollbar */
+    max-height: 140px;
+    overflow-y: auto;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.games-card-link {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: inherit; /* Mantiene el color del texto */
-    display: block; /* Asegura que el enlace abarque todo el contenedor */
-}
 
-.games-card-link:hover .game-card {
+.games-card:hover {
     box-shadow: 0 4px 12px rgba(44,204,64,0.2);
     transform: translateY(-20px);
     transition: all 0.3s ease;

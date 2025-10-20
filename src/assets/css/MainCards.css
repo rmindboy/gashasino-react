@@ -3,6 +3,7 @@
     display: flex;
     align-items: flex-start;
     background: #fff;
+    color: #333;
     border: 2px solid #2ecc40;
     border-radius: 10px;
     margin: 0 auto 30px auto;
@@ -56,7 +57,7 @@
 }
 
 /* Efecto hover para las tarjetas de juego */
-.game-card-link:hover .game-card {
+.game-card:hover{
     box-shadow: 0 4px 12px rgba(44,204,64,0.2);
     transform: translateY(-20px);
     transition: all 0.3s ease;

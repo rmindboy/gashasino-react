@@ -2,16 +2,14 @@ import "../css/Games.css";
 
 export function GamesCard({ href, img, alt, title, subtitle, children }) {
   return (
-    <a href={href} className="games-card-link">
-      <section className="games-card">
+    <button className="games-card" onClick={href}>
         <img src={img} alt={alt} className="games-img" />
         <div className="games-info">
           <h2>{title}</h2>
           <span className="games-subtitle">{subtitle}</span>
           <p className="games-desc">{children}</p>
         </div>
-      </section>
-    </a>
+      </button>
   );
 }
 

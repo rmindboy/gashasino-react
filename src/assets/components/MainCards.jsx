@@ -3,17 +3,13 @@ import "../css/MainCards.css";
 
 export function GameCard({ href, img, alt, title, subtitle, children }) {
   return (
-    <button className="game-card-button" onClick={href}>
-    <a href={href} className="game-card-link">
-      <section className="game-card">
+    <button className="game-card" onClick={href}>
         <img src={img} alt={alt} className="game-img" />
         <div className="game-info">
           <h2>{title}</h2>
           <span className="game-subtitle">{subtitle}</span>
           <p className="game-desc">{children}</p>
         </div>
-      </section>
-    </a>
     </button>
   );
 }
