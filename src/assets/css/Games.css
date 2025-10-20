@@ -4,7 +4,7 @@ body {
     background: #ecd5f550;
     color: #222;
 }
-z
+
 .main-title {
     text-align: center;
     font-family: 'Brush Script MT', cursive;
@@ -12,34 +12,23 @@ z
     margin: 30px 0 20px 0;
     font-weight: normal;
 }
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-    padding: 0 20px;
-}
-.game-card {
+
+.games-card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center;    /* Centra el contenido horizontalmente */
     background: #fff;
     border: 2px solid #2ecc40;
     border-radius: 10px;
-    padding: 20px;
-    gap: 18px;
+    margin: 0 auto 30px auto;
+    max-width: 300px;
+    height: 500px;
+    padding: 30px;
     box-shadow: 0 2px 8px rgba(44,204,64,0.08);
-    width: 340px;
-    height: 520px; /* Alto suficiente para el texto más largo */
-    margin: 0 auto;
-    transition: box-shadow 0.3s, transform 0.3s;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
-.game-img {
+
+.games-img {
     display: block;
     margin: 0 auto;
     width: 100%;
@@ -51,38 +40,41 @@ z
     margin-bottom: 12px;
 }
 
-.game-info {
+.games-info {
     width: 100%;
     text-align: center;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center; /* Centra el contenido dentro de games-info */
 }
 
-.game-info h2 {
+.games-info h2 {
     font-size: 1.3em;
     margin: 0 0 6px 0;
+    width: 100%; /* Asegura que el título no se salga */
 }
 
-.game-subtitle {
+.games-subtitle {
     font-size: 1em;
     margin-bottom: 6px;
+    width: 100%; /* Asegura que el subtítulo no se salga */
 }
 
-.game-desc {
+.games-desc {
     font-size: 0.98em;
     margin-top: 6px;
     line-height: 1.5;
 }
 
-.game-card-link {
+.games-card-link {
     text-decoration: none; /* Elimina el subrayado del enlace */
     color: inherit; /* Mantiene el color del texto */
     display: block; /* Asegura que el enlace abarque todo el contenedor */
 }
 
-.game-card-link:hover .game-card {
+.games-card-link:hover .game-card {
     box-shadow: 0 4px 12px rgba(44,204,64,0.2);
     transform: translateY(-20px);
     transition: all 0.3s ease;
