@@ -18,7 +18,9 @@ return (
     />
     {view === "register" && <Register />}
     {view === "games" && <Games />}
-    {view === "main" && <MainCards />}
+    {view === "main" && <MainCards 
+    onBlackjackClick={() => setView("blackjack")} />}
+    {view === "blackjack" && <Blackjack />}
     <Footer />
   </div>
 );

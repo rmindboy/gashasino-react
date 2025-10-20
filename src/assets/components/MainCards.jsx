@@ -3,6 +3,7 @@ import "../css/MainCards.css";
 
 export function GameCard({ href, img, alt, title, subtitle, children }) {
   return (
+    <button className="game-card-button" onClick={href}>
     <a href={href} className="game-card-link">
       <section className="game-card">
         <img src={img} alt={alt} className="game-img" />
@@ -13,10 +14,11 @@ export function GameCard({ href, img, alt, title, subtitle, children }) {
         </div>
       </section>
     </a>
+    </button>
   );
 }
 
-export default function MainCards() {
+export default function MainCards({onBlackjackClick}) {
   return (
     <main className="main-menu">
 
@@ -24,7 +26,7 @@ export default function MainCards() {
       <h1 className="main-title">Juegos más populares</h1>
 
       <GameCard
-        href="blackjack.html"
+        onClick={onBlackjackClick}
         img="src/assets/imgs/blackjack.png"
         alt="BlackJack"
         title="BlackJack"
