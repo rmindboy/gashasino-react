@@ -1,9 +1,9 @@
 import React from "react";
 import "../css/MainCards.css";
 
-export function GameCard({ href, img, alt, title, subtitle, children }) {
+export function GameCard({ onClick, img, alt, title, subtitle, children }) {
   return (
-    <button className="game-card" onClick={href}>
+    <button className="game-card" onClick={onClick}>
         <img src={img} alt={alt} className="game-img" />
         <div className="game-info">
           <h2>{title}</h2>

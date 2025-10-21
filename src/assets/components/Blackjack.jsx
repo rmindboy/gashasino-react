@@ -13,9 +13,13 @@ const Blackjack = () => {
   const [message, setMessage] = useState("");
   const [gameOver, setGameOver] = useState(false);
 
-  // Crear mazo y repartir cartas al iniciar
+  // Crear mazo y repartir cartas al iniciar (inicialización local en useEffect)
   useEffect(() => {
-    restartGame();
+    const newDeck = createDeck();
+    dealInitialCards(newDeck);
+    setMessage("");
+    setGameOver(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const createDeck = () => {
@@ -115,17 +119,17 @@ const Blackjack = () => {
   };
 
   return (
-    <div className="blackjack-container" style={{ textAlign: "center", color: "#fff", background: "#222", minHeight: "100vh", padding: "20px" }}>
-      <header style={{ marginBottom: "20px" }}>
-        <h1>Blackjack</h1>
+    <div className="blackjack-container">
+      <header className="blackjack-title">
+        <h1 className="game-title">Blackjack</h1>
       </header>
 
-      <div className="game-area" style={{ display: "flex", justifyContent: "space-around", marginBottom: "20px" }}>
+  <div className="game-area">
         <div className="player-area">
           <h2>Jugador</h2>
-          <div className="cards" style={{ display: "flex", justifyContent: "center" }}>
+          <div className="cards">
             {playerHand.map((card, i) => (
-              <div key={i} className="card" style={{ margin: "5px", fontSize: "24px" }}>
+              <div key={i} className="card">
                 {card.value}
                 {card.suit}
               </div>
@@ -136,9 +140,9 @@ const Blackjack = () => {
 
         <div className="dealer-area">
           <h2>Crupier</h2>
-          <div className="cards" style={{ display: "flex", justifyContent: "center" }}>
+          <div className="cards">
             {dealerHand.map((card, i) => (
-              <div key={i} className="card" style={{ margin: "5px", fontSize: "24px" }}>
+              <div key={i} className="card">
                 {card.value}
                 {card.suit}
               </div>
@@ -148,13 +152,13 @@ const Blackjack = () => {
         </div>
       </div>
 
-      <div className="controls" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+  <div className="controls">
         <button onClick={hit} disabled={gameOver}>Pedir Carta</button>
         <button onClick={stand} disabled={gameOver}>Plantarse</button>
         <button onClick={restartGame}>Reiniciar</button>
       </div>
 
-      <p id="result-message" style={{ marginTop: "20px" }}>{message}</p>
+  <p id="result-message">{message}</p>
     </div>
   );
 };

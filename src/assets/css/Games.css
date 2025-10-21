@@ -21,28 +21,53 @@ body {
     color: #333;
     border: 2px solid #2ecc40;
     border-radius: 10px;
-    margin: 0 auto 30px auto;
-    max-width: 300px;
-    height: 500px;
-    padding: 30px;
+    margin: 0 auto 1.5rem auto;
+    max-width: 520px; /* tarjetas más anchas */
+    width: 100%;
+    padding: 1.25rem;
     box-shadow: 0 2px 8px rgba(44,204,64,0.08);
-
-    /* Evita que el padding aumente la altura total y recorta el contenido desbordado */
     box-sizing: border-box;
-    overflow: hidden;
+    align-self: stretch; /* para que la tarjeta ocupe la altura de la celda del grid */
+}
+
+/* Grid para mostrar las tarjetas en filas de 3 */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr)); /* columnas más anchas */
+    gap: 1.25rem;
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Responsive: 2 columnas en tablets, 1 en móviles */
+@media (max-width: 900px) {
+    .games-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
 .games-img {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 0.75rem auto;
     width: 100%;
-    max-width: 280px;
-    height: 180px;
+    max-width: 520px;
+    height: auto;
+    aspect-ratio: 9/5;
     border-radius: 14px;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    margin-bottom: 12px;
 }
 
 .games-info {
@@ -64,6 +89,7 @@ body {
     font-size: 1.3em;
     margin: 0 0 6px 0;
     width: 100%; /* Asegura que el título no se salga */
+    height: auto;
 }
 
 .games-subtitle {
@@ -76,10 +102,6 @@ body {
     font-size: 0.98em;
     margin-top: 6px;
     line-height: 1.5;
-
-    /* Evita que la descripción expanda la tarjeta: limita altura y muestra scrollbar */
-    max-height: 140px;
-    overflow-y: auto;
     text-align: left;
     width: 100%;
     box-sizing: border-box;

@@ -13,22 +13,28 @@ body {
 /* Estilo de las tarjetas de juego */
 .game-card {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     background: #fff;
     border: 2px solid #2ecc40;
     border-radius: 10px;
-    margin: 0 auto 30px auto;
-    max-width: 900px;
-    padding: 30px;
-    gap: 30px;
+    margin: 0 auto 2rem auto;
+    max-width: 1000px;
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1.25rem;
     box-shadow: 0 2px 8px rgba(44,204,64,0.08);
+    box-sizing: border-box;
 }
 
 /* Estilo de la imagen del juego */
 .game-img {
-    width: 320px;
-    height: 220px;
-    border-radius: 18px;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 16/11;
+    border-radius: 12px;
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
@@ -147,42 +153,74 @@ footer {
 /* Ajuste de las imágenes decorativas */
 .chica-img {
     position: absolute;
-    max-width: 40%; /* Ajusta el tamaño relativo al ancho de la pantalla */
+    max-width: 35vw; /* relativo a la ventana para que escale con zoom */
+    width: auto;
     height: auto;
     object-fit: cover;
-    opacity: 0.85;
+    opacity: 0.9;
+    pointer-events: auto; /* permitir hover */
+    transition: transform 0.5s cubic-bezier(.2,.9,.3,1),
+                box-shadow 0.6s ease,
+                filter 0.45s ease,
+                opacity 0.45s ease;
 }
 
 /* Imagen a la izquierda */
 .chica-left {
-    left: -40%; /* Más cerca del borde izquierdo */
+    left: -20vw; /* Más cerca del borde izquierdo */
     top: 65%;
     transform: translateY(-50%);
 }
 
 /* Imagen a la derecha */
 .chica-right {
-    right: -40%; /* Más cerca del borde derecho */
+    right: -20vw; /* Más cerca del borde derecho */
     top: 35%;
     transform: translateY(-50%);
 }
 
 /* Efecto hover */
 .chica-img:hover {
-    transform: translateY(-50%) scale(1.05); /* Aumenta ligeramente el tamaño */
+    transform: translateY(-50%) scale(1.12) rotate(-1deg); /* Ligeramente más grande y con rotación */
     opacity: 1;
-    max-width: 50%;
-    transition: max-width 2s, transform 2s, opacity 1.5s;  /* Aumenta la opacidad */
+    max-width: 48%;
+    box-shadow: none;
+    filter:
+        drop-shadow(0 8px 18px rgba(255,0,110,0.30))
+        drop-shadow(0 0 28px rgba(255,120,0,0.24))
+        drop-shadow(0 0 38px rgba(255,220,0,0.18))
+        drop-shadow(0 0 48px rgba(0,200,120,0.14))
+        drop-shadow(0 0 58px rgba(0,120,255,0.10))
+        drop-shadow(0 0 68px rgba(150,0,255,0.08));
+    animation: chica-glow 2.6s linear infinite;
 }
 
 /* Ajuste del contenedor principal */
 .main-menu {
     position: relative;
-    padding: 20px;
+    padding: 1rem;
     max-width: 1200px; /* Limita el ancho máximo del contenido */
     margin: 0 auto; /* Centra el contenido en la pantalla */
+    width: calc(100% - 2rem);
 }
 .juego-btn{
     text-decoration: none;
     color: white;
+}
+
+@keyframes chica-glow {
+    0% {
+        filter: drop-shadow(0 6px 14px rgba(255,0,110,0.28)) drop-shadow(0 0 22px rgba(255,120,0,0.20)) drop-shadow(0 0 32px rgba(255,220,0,0.14));
+    }
+    50% {
+        filter: drop-shadow(0 12px 28px rgba(255,0,110,0.40)) drop-shadow(0 0 36px rgba(255,120,0,0.30)) drop-shadow(0 0 46px rgba(255,220,0,0.22));
+    }
+    100% {
+        filter: drop-shadow(0 6px 14px rgba(255,0,110,0.28)) drop-shadow(0 0 22px rgba(255,120,0,0.20)) drop-shadow(0 0 32px rgba(255,220,0,0.14));
+    }
+}
+
+@keyframes spin-once {
+    0% { transform: translateY(-50%) scale(1.12) rotate(0deg); }
+    100% { transform: translateY(-50%) scale(1.12) rotate(576000000000000deg);}
 }
