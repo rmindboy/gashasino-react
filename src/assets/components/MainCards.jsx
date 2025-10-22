@@ -21,7 +21,7 @@ export default function MainCards({onBlackjackClick}) {
 
       <GameCard
         onClick={onBlackjackClick}
-        img="public/blackjack.png"
+        img={`${import.meta.env.BASE_URL}blackjack.png`}
         alt="BlackJack"
         title="BlackJack"
         subtitle="21"
@@ -34,7 +34,7 @@ export default function MainCards({onBlackjackClick}) {
       </GameCard>
 
       <GameCard
-        img="public/poker.png"
+        img={`${import.meta.env.BASE_URL}poker.png`}
         alt="Poker"
         title="Poker"
         subtitle="Texas Hold'em"
@@ -47,7 +47,7 @@ export default function MainCards({onBlackjackClick}) {
       </GameCard>
 
       <GameCard
-        img="public/slots.png"
+        img={`${import.meta.env.BASE_URL}slots.png`}
         alt="Slots"
         title="Slots"
         subtitle="777"
@@ -60,12 +60,12 @@ export default function MainCards({onBlackjackClick}) {
       </GameCard>
 
       <img
-        src="public/crupier.png"
+        src={`${import.meta.env.BASE_URL}crupier.png`}
         className="chica-img chica-right"
         alt="Crupier"
       />
       <img
-        src="public/apostadora.png"
+        src={`${import.meta.env.BASE_URL}apostadora.png`}
         className="chica-img chica-left"
         alt="Apostadora"
       />

@@ -22,7 +22,7 @@ return (
       <div className="games-grid">
         <GamesCard
           onClick={onBlackjackClick}
-          img="public/blackjack.png"
+          img={`${import.meta.env.BASE_URL}blackjack.png`}
           alt="BlackJack"
           title="BlackJack"
           subtitle="21"
@@ -35,7 +35,7 @@ return (
         </GamesCard>
 
         <GamesCard
-          img="public/poker.png"
+          img={`${import.meta.env.BASE_URL}poker.png`}
           alt="Poker"
           title="Poker"
           subtitle="Texas Hold'em"
@@ -47,7 +47,7 @@ return (
         </GamesCard>
 
         <GamesCard
-          img="public/slots.png"
+          img={`${import.meta.env.BASE_URL}slots.png`}
           alt="Slots"
           title="Slots"
           subtitle="777"
