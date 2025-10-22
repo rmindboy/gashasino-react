@@ -160,6 +160,7 @@ const Blackjack = () => {
 
   <p id="result-message">{message}</p>
     </div>
+    
   );
 };
 

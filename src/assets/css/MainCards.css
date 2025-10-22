@@ -68,9 +68,11 @@
 
 /* Efecto hover para las tarjetas de juego */
 .game-card:hover{
-    box-shadow: 0 4px 12px rgba(44,204,64,0.2);
+    box-shadow: 0 4px 12px rgb(0, 255, 34);
     transform: translateY(-20px);
     transition: all 0.3s ease;
+    border-width: 2.5px;
+    border-color: rgb(0, 255, 34) ;
 }
 
 /* Ajuste de las imágenes decorativas */
@@ -102,7 +104,7 @@
     max-width: 48%;
     /* Usar drop-shadow para respetar la forma de la imagen (no caja) */
     box-shadow: none;
-    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 8px 12px rgba(0, 255, 34, 0.293) );
     transition: transform 0.5s cubic-bezier(.2,.9,.3,1),
                 filter 0.45s ease,
                 opacity 0.45s ease;

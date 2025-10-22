@@ -14,13 +14,13 @@ function Header({ onRegisterClick, onGamesClick }) {
           <li><button className="Skins">Aspectos</button></li>
           <li><button className="Community">Comunidad</button></li>
           <li><button className="Store">Tienda</button></li>
-          <li><button className="Gachapon">Gachapon</button></li>
+          <li><button className="Gachapon">Gachapón</button></li>
         </ul>
       </nav>
 
       <div className="auth-buttons">
         <button className="login">iniciar sesión</button>
-        <button onClick={onRegisterClick}>Register</button>
+        <button onClick={onRegisterClick}>Registrarse</button>
       </div>
     </header>
   )
