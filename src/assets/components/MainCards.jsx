@@ -1,6 +1,10 @@
 import React from "react";
 import "../css/MainCards.css";
-
+import "../imgs/blackjack.png";
+import "../imgs/poker.png";
+import "../imgs/slots.png";
+import "../imgs/crupier.png";
+import "../imgs/apostadora.png";
 export function GameCard({ onClick, img, alt, title, subtitle, children }) {
   return (
     <button className="game-card" onClick={onClick}>

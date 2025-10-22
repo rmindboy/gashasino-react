@@ -1,4 +1,8 @@
 import "../css/Games.css";
+import "../imgs/blackjack.png";
+import "../imgs/poker.png";
+import "../imgs/slots.png";
+import React from "react";
 
 export function GamesCard({ onClick, img, alt, title, subtitle, children }) {
   return (
