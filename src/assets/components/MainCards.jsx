@@ -1,10 +1,4 @@
 import React from "react";
-import "../css/MainCards.css";
-import "../imgs/blackjack.png";
-import "../imgs/poker.png";
-import "../imgs/slots.png";
-import "../imgs/crupier.png";
-import "../imgs/apostadora.png";
 export function GameCard({ onClick, img, alt, title, subtitle, children }) {
   return (
     <button className="game-card" onClick={onClick}>
@@ -27,7 +21,7 @@ export default function MainCards({onBlackjackClick}) {
 
       <GameCard
         onClick={onBlackjackClick}
-        img="src/assets/imgs/blackjack.png"
+        img="public/blackjack.png"
         alt="BlackJack"
         title="BlackJack"
         subtitle="21"
@@ -40,7 +34,7 @@ export default function MainCards({onBlackjackClick}) {
       </GameCard>
 
       <GameCard
-        img="src/assets/imgs/poker.png"
+        img="public/poker.png"
         alt="Poker"
         title="Poker"
         subtitle="Texas Hold'em"
@@ -53,7 +47,7 @@ export default function MainCards({onBlackjackClick}) {
       </GameCard>
 
       <GameCard
-        img="src/assets/imgs/slots.png"
+        img="public/slots.png"
         alt="Slots"
         title="Slots"
         subtitle="777"
@@ -66,12 +60,12 @@ export default function MainCards({onBlackjackClick}) {
       </GameCard>
 
       <img
-        src="src/assets/imgs/crupier.png"
+        src="public/crupier.png"
         className="chica-img chica-right"
         alt="Crupier"
       />
       <img
-        src="src/assets/imgs/apostadora.png"
+        src="public/apostadora.png"
         className="chica-img chica-left"
         alt="Apostadora"
       />

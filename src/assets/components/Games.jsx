@@ -1,8 +1,5 @@
 import "../css/Games.css";
-import "../imgs/blackjack.png";
-import "../imgs/poker.png";
-import "../imgs/slots.png";
-import React from "react";
+import '../css/MainCards.css'
 
 export function GamesCard({ onClick, img, alt, title, subtitle, children }) {
   return (
@@ -25,7 +22,7 @@ return (
       <div className="games-grid">
         <GamesCard
           onClick={onBlackjackClick}
-          img="src/assets/imgs/blackjack.png"
+          img="public/blackjack.png"
           alt="BlackJack"
           title="BlackJack"
           subtitle="21"
@@ -38,7 +35,7 @@ return (
         </GamesCard>
 
         <GamesCard
-          img="src/assets/imgs/poker.png"
+          img="public/poker.png"
           alt="Poker"
           title="Poker"
           subtitle="Texas Hold'em"
@@ -46,12 +43,11 @@ return (
           Juega Poker, hasta el último dólar:
           <br />
           <br />
-          Consigue la mejor mano de cinco cartas y gánale a tus oponentes. Si
-          pierdes y te quedas pobre recuerda, siempre tendrás tu otro riñón.
+          Consigue la mejor mano de cinco cartas y gánale a tus oponentes.
         </GamesCard>
 
         <GamesCard
-          img="src/assets/imgs/slots.png"
+          img="public/slots.png"
           alt="Slots"
           title="Slots"
           subtitle="777"
