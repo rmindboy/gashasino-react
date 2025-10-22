@@ -97,9 +97,17 @@ nav ul li {
 
 /* Estilos adicionales del logo */
 .logo {
+    background-color: #222;
     text-decoration: none;
     color: #2ecc40; /* Mantén el color del logo */
 }
+
+.logo:hover {
+    color: #27ae60; /* Cambia el color al pasar el cursor */
+    text-decoration: none;
+    border-color: #222;
+}
+
 
 .nav-buttons {
     display: flex;

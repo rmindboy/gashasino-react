@@ -1,12 +1,12 @@
 import React from "react";
 import '../css/Header.css';
 
-function Header({ onRegisterClick, onGamesClick }) {
+function Header({ onMenuClick,onRegisterClick, onGamesClick }) {
   return (
     <header>
-      <a href="mainmenu.html" className="logo">
+      <button onClick={onMenuClick} className="logo">
         Ga$ha$ino
-      </a>
+      </button>
 
       <nav>
         <ul className="nav-buttons">

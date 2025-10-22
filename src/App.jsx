@@ -15,6 +15,7 @@ function App() {
     <div className="app-root">
       <main className="app-content">
         <Header
+          onMenuClick={() => setView("main")}
           onRegisterClick={() => setView("register")}
           onGamesClick={() => setView("games")}
         />
