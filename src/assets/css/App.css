@@ -1,155 +1,3 @@
-/* Estilos generales */
-body {
-    justify-content: center;
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(to bottom, #1a1a1a, #000000);
-    background: #ffe6f4;
-    color: #222;
-}
-
-
-
-/* Estilo de las tarjetas de juego */
-.game-card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    background: #fff;
-    border: 2px solid #2ecc40;
-    border-radius: 10px;
-    margin: 0 auto 2rem auto;
-    max-width: 1000px;
-    width: 100%;
-    padding: 1.5rem;
-    gap: 1.25rem;
-    box-shadow: 0 2px 8px rgba(44,204,64,0.08);
-    box-sizing: border-box;
-}
-
-/* Estilo de la imagen del juego */
-.game-img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    aspect-ratio: 16/11;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-}
-
-/* Estilo de la información del juego */
-.game-info {
-    flex: 1;
-}
-
-/* Estilo del título del juego */
-.game-info h2 {
-    margin: 0;
-    font-size: 1.7em;
-    font-weight: bold;
-}
-
-/* Estilo del subtítulo del juego */
-.game-subtitle {
-    display: block;
-    font-size: 1.2em;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-/* Estilo de la descripción del juego */
-.game-desc {
-    font-size: 1.08em;
-    margin-top: 10px;
-    line-height: 1.6;
-}
-
-/* Estilo del pie de página */
-footer {
-    background: #f5f5f5;
-    border-top: 1px solid #ccc;
-    padding: 18px 0 0 0;
-    margin-top: 40px;
-}
-
-/* Estilo de la navegación del pie de página */
-.footer-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px 10px 40px;
-    font-size: 1.1em;
-    color: #222;
-}
-
-/* Estilo de los enlaces del pie de página */
-.footer-links {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    font-size: 1em;
-    color: #222;
-}
-
-/* Estilo de cada columna de enlaces */
-.footer-links div {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-/* Estilo de los enlaces individuales */
-.footer-social {
-    display: flex;
-    gap: 18px;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px 40px;
-}
-
-/* Estilo de los iconos sociales */
-.footer-social img {
-    width: 28px;
-    height: 28px;
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-/* Estilos adicionales del logo */
-.logo {
-    text-decoration: none;
-    color: #2ecc40; /* Mantén el color del logo */
-}
-
-/* Estilos adicionales de los botones de autenticación */
-.auth-buttons .register {
-    text-decoration: none;
-    background: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 7px 18px;
-    font-size: 1em;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-}
-
-/* Estilos para los enlaces de las tarjetas de juego */
-.game-card-link {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: inherit; /* Mantiene el color del texto */
-    display: block; /* Asegura que el enlace abarque todo el contenedor */
-}
-
-/* Efecto hover para las tarjetas de juego */
-.game-card-link:hover .game-card {
-    box-shadow: 0 4px 12px rgba(44,204,64,0.2);
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
-}
-
 /* Ajuste de las imágenes decorativas */
 .chica-img {
     position: absolute;
@@ -159,40 +7,20 @@ footer {
     object-fit: cover;
     opacity: 0.9;
     pointer-events: auto; /* permitir hover */
-    transition: transform 0.5s cubic-bezier(.2,.9,.3,1),
-                box-shadow 0.6s ease,
-                filter 0.45s ease,
-                opacity 0.45s ease;
 }
 
 /* Imagen a la izquierda */
 .chica-left {
     left: -20vw; /* Más cerca del borde izquierdo */
-    top: 65%;
+    top: 40%;
     transform: translateY(-50%);
 }
 
 /* Imagen a la derecha */
 .chica-right {
     right: -20vw; /* Más cerca del borde derecho */
-    top: 35%;
+    top: 20%;
     transform: translateY(-50%);
-}
-
-/* Efecto hover */
-.chica-img:hover {
-    transform: translateY(-50%) scale(1.12) rotate(-1deg); /* Ligeramente más grande y con rotación */
-    opacity: 1;
-    max-width: 48%;
-    box-shadow: none;
-    filter:
-        drop-shadow(0 8px 18px rgba(255,0,110,0.30))
-        drop-shadow(0 0 28px rgba(255,120,0,0.24))
-        drop-shadow(0 0 38px rgba(255,220,0,0.18))
-        drop-shadow(0 0 48px rgba(0,200,120,0.14))
-        drop-shadow(0 0 58px rgba(0,120,255,0.10))
-        drop-shadow(0 0 68px rgba(150,0,255,0.08));
-    animation: chica-glow 2.6s linear infinite;
 }
 
 /* Ajuste del contenedor principal */
@@ -208,19 +36,3 @@ footer {
     color: white;
 }
 
-@keyframes chica-glow {
-    0% {
-        filter: drop-shadow(0 6px 14px rgba(255,0,110,0.28)) drop-shadow(0 0 22px rgba(255,120,0,0.20)) drop-shadow(0 0 32px rgba(255,220,0,0.14));
-    }
-    50% {
-        filter: drop-shadow(0 12px 28px rgba(255,0,110,0.40)) drop-shadow(0 0 36px rgba(255,120,0,0.30)) drop-shadow(0 0 46px rgba(255,220,0,0.22));
-    }
-    100% {
-        filter: drop-shadow(0 6px 14px rgba(255,0,110,0.28)) drop-shadow(0 0 22px rgba(255,120,0,0.20)) drop-shadow(0 0 32px rgba(255,220,0,0.14));
-    }
-}
-
-@keyframes spin-once {
-    0% { transform: translateY(-50%) scale(1.12) rotate(0deg); }
-    100% { transform: translateY(-50%) scale(1.12) rotate(576000000000000deg);}
-}
