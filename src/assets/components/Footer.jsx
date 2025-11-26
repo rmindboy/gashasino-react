@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Footer.css";
 
-function Footer() {
+function Footer({ onSurveysClick }) {
   return (
     <>
       <footer>
@@ -19,6 +19,11 @@ function Footer() {
             <span>Developers</span>
           </div>
         </div>
+        {onSurveysClick && (
+          <button className="btn-surveys" onClick={onSurveysClick}>
+          Responder encuestas
+          </button>
+        )}
       </footer>
     </>
   );

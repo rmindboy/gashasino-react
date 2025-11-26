@@ -6,6 +6,9 @@ import MainCards from "./assets/components/MainCards";
 import Register from "./assets/components/Register";
 import Games from "./assets/components/Games";
 import Blackjack from "./assets/components/Blackjack";
+import SurveyUserSatisfaction from "./assets/components/SurveyUserSatisfaction";
+import SurveyDesignSuggestions from "./assets/components/SurveyDesignSuggestions";
+import SurveyGamesSuggestions from "./assets/components/SurveyGamesSuggestions";
 
 function App() {
 
@@ -26,8 +29,33 @@ function App() {
           <MainCards onBlackjackClick={() => setView("blackjack")} />
         )}
         {view === "blackjack" && <Blackjack />}
+        {view === "survey-satisfaction" && (
+          <SurveyUserSatisfaction 
+            onMenuClick={() => setView("main")}
+            onRegisterClick={() => setView("register")}
+            onGamesClick={() => setView("games")}
+            onNext={() => setView("survey-design")}
+          />
+        )}
+        {view === "survey-design" && (
+          <SurveyDesignSuggestions 
+            onMenuClick={() => setView("main")}
+            onRegisterClick={() => setView("register")}
+            onGamesClick={() => setView("games")}
+            onNext={() => setView("survey-games")}
+            onPrev={() => setView("survey-satisfaction")}
+          />
+        )}
+        {view === "survey-games" && (
+          <SurveyGamesSuggestions 
+            onMenuClick={() => setView("main")}
+            onRegisterClick={() => setView("register")}
+            onGamesClick={() => setView("games")}
+            onPrev={() => setView("survey-design")}
+          />
+        )}
       </main>
-      <Footer />
+      <Footer onSurveysClick={() => setView("survey-satisfaction")} />
     </div>
   );
 
