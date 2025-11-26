@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/Header.css';
 
-function Header({ onMenuClick,onRegisterClick, onGamesClick }) {
+function Header({ onMenuClick,onRegisterClick, onGamesClick, onLoginClick }) {
   return (
     <header>
       <button onClick={onMenuClick} className="logo">
@@ -19,7 +19,7 @@ function Header({ onMenuClick,onRegisterClick, onGamesClick }) {
       </nav>
 
       <div className="auth-buttons">
-        <button className="login">iniciar sesión</button>
+        <button className="login" onClick={onLoginClick}>iniciar sesión</button>
         <button onClick={onRegisterClick}>Registrarse</button>
       </div>
     </header>

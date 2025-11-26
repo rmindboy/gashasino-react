@@ -9,6 +9,7 @@ import Blackjack from "./assets/components/Blackjack";
 import SurveyUserSatisfaction from "./assets/components/SurveyUserSatisfaction";
 import SurveyDesignSuggestions from "./assets/components/SurveyDesignSuggestions";
 import SurveyGamesSuggestions from "./assets/components/SurveyGamesSuggestions";
+import Login from "./assets/components/Login";
 
 function App() {
 
@@ -20,8 +21,10 @@ function App() {
         <Header
           onMenuClick={() => setView("main")}
           onRegisterClick={() => setView("register")}
+          onLoginClick={() => setView("login")}
           onGamesClick={() => setView("games")}
         />
+        {view === "login" && <Login />}
         {view === "register" && <Register />}
         {view === "games" && 
           <Games onBlackjackClick={() => setView("blackjack")}/>}
